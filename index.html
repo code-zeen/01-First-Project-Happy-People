@@ -3,22 +3,15 @@
 
 <head>
   <meta charset="UTF-8">
-  <!-- bxslider -->
-  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
-  <script>
-    $(document).ready(function(){
-      $('.slider').bxSlider();
-    });
-  </script> -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
 
   <!-- swiper css -->
-  <link rel="stylesheet" href="/script/swiper-bundle.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
 
   <link rel="stylesheet" href="./css/common.css">
   <link rel="stylesheet" href="./css/style.css">
   <link rel="icon" href="./images/logo small.png" type="image/icon type">
+  <script src="./script/custom.js"></script>
 
   <title>사단법인 해피피플 | Happy People</title>
 </head>
@@ -102,28 +95,24 @@
       <div class="bg"></div>
   </div>
 
-
-  <!-- 이미지 슬라이드 -->
-  <div class="landing-slide">
-    <img src="images/slider 1 child korean expand extended gradient text.jpg" alt="">
-    <!-- <img src="images/slider 2 volunteers edit.jpg" alt="">
-    <img src="images/slider 3 graphics test-01.jpg" alt="">
-    <img src="images/slider 5 건강한 한끼 지원-01.jpg" alt=""> -->
-  </div>
-
-  <!-- BX 슬라이드 -->
-  <!-- <div class="slider">
-    <div>I am a slide.</div>
-    <div>I am another slide.</div>
-  </div> -->
-
   <!-- Swiper 슬라이드 -->
   <div class="swiper mySwiper">
     <div class="swiper-wrapper">
-      <div class="swiper-slide">Slide 1</div>
-      <div class="swiper-slide">Slide 2</div>
-      <div class="swiper-slide">Slide 3</div>
-      <div class="swiper-slide">Slide 4</div>
+      <div class="swiper-slide">
+        <img src="images/slider 1 child korean fixed ratio.jpg" alt="해피클래스">
+        <a class="sl1" href="#none">자세히 보기 ></a>
+      </div>
+      <div class="swiper-slide">
+        <img src="images/slider 2 volunteers final.jpg" alt="봉사활동">
+        <a class="sl2" href="#none">신청하기 ></a>
+      </div>
+      <div class="swiper-slide">
+        <img class="sl3" src="images/slider 3 graphics test-01.jpg" alt="나눔">
+      </div>
+      <div class="swiper-slide">
+        <img src="images/slider 5 건강한 한끼 지원 final.jpg" alt="건강한 한끼">
+        <a class="sl4" href="#none">후원하기 ></a>
+      </div>
     </div>
     <div class="swiper-button-next"></div>
     <div class="swiper-button-prev"></div>
@@ -483,15 +472,18 @@
   <script src="./script/jquery-3.6.0.min.js"></script>
   <script src="./script/custom.js"></script>
 
-  <!-- Swiper -->
-  <script src="/script/swiper-bundle.min.js"></script>
+  <!-- Swiper JS -->
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
   <!-- Initialize Swiper -->
   <script>
     var swiper = new Swiper(".mySwiper", {
+      slidesPerView: 1,
+      spaceBetween: 30,
+      loop: true,
       pagination: {
         el: ".swiper-pagination",
-        type: "fraction",
+        clickable: true,
       },
       navigation: {
         nextEl: ".swiper-button-next",
@@ -499,7 +491,6 @@
       },
     });
   </script>
-
 </body>
 
 </html>
